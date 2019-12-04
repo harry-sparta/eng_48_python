@@ -1,0 +1,4 @@
+#Write things to ignore by git
+
+.idea/
+venv/
