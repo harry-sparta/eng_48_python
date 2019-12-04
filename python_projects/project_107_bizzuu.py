@@ -7,17 +7,23 @@
     # if a multiple of 3 and 5 it return bizzzzuu
 
 # Game codes-------------------------------------------------------------------------------------
+def bizz(num):
+    return num%3
+
+def zzuu(num):
+    return num%5
+
 import time
 user_num = int(input('Give me a max number to stop at:    '))
 for counter_num in range(0,user_num):
     time.sleep(0.1)
     print(counter_num)
     time.sleep(0.3)
-    if counter_num%3 and counter_num%5 == 0:
+    if bizz(counter_num) and zzuu(counter_num) == 0:
         print('BIZZZZZZUUUUUUUUUU!')
-    elif counter_num%5 == 0:
+    elif zzuu(counter_num) == 0:
         print('ZZUUUUUUUUUUUUUUUU!')
-    elif counter_num%3 == 0:
+    elif bizz(counter_num) == 0:
         print('BIZZZZZZZZZZZZZZZZ!')
     else:
         print('...........')
